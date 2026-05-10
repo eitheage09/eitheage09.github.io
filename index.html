@@ -48,7 +48,7 @@
             font-weight: 600;
         }
         header .sub {
-            font-size: 1.1rem;
+            font-size: 0.68rem;
             opacity: 0.92;
             margin-top: 6px;
         }
@@ -58,7 +58,7 @@
             justify-content: center;
             gap: 24px;
             margin-top: 16px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             background: rgba(255,255,255,0.15);
             border-radius: 60px;
             padding: 8px 20px;
@@ -70,7 +70,7 @@
         .contact-bar span {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         /* 导航：7个条目 + 加粗 */
@@ -124,7 +124,7 @@
             margin-bottom: 20px;
         }
         .info-item h3 {
-            font-size: 1.08rem;
+            font-size: 0.98rem;
             color: #3d6955;
             margin-bottom: 6px;
             font-weight: 600;
@@ -139,7 +139,7 @@
         }
         .info-item ul {
             list-style-type: disc;
-            padding-left: 28px;
+            padding-left: 16px;
             color: #2c3e4e;
         }
         .info-item li {
@@ -204,12 +204,14 @@
 
 <div class="container">
     <header>
-        <img src="https://github.com/eitheage09/photo/blob/b1cdb71af0f871c2a0fd1f3e0d9273e66318d982/photo.jpg" alt="头像" class="avatar">
+        <img src="https://fastly.jsdelivr.net/gh/eitheage09/photo/photo.jpg" alt="头像" class="avatar">
         <h1>林逸菲</h1>
-        <div class="sub">意向岗位：Java后端开发 | 可立即到岗</div>
+        <div class="sub">意向岗位：Java后端开发  |  立即到岗</div>
         <div class="contact-bar">
-            <span>+86 15859381915</span>
-            <span>2964937704@qq.com</span>
+            <span>📞 15859381915</span>
+        </div>
+        <div class="contact-bar">
+            <span>✉️ 2964937704@qq.com</span>
         </div>
     </header>
 
@@ -227,14 +229,16 @@
     <!-- 个人简介 -->
     <section id="intro">
         <h2> 个人简介</h2>
-        <p>东北大学计算机科学与技术本科在读，985/双一流院校，专注Java后端开发与AI应用落地。具备高并发、缓存优化、RAG检索、智能Agent等实战能力，熟练使用SpringBoot、Redis、Elasticsearch、Kafka等技术栈，可立即到岗。</p>
+        <p>东北大学计算机科学与技术本科在读，985/双一流院校，专注Java后端开发与AI应用落地。</p>
+        <p>具备高并发、缓存优化、RAG检索、智能Agent等实战能力，熟练使用SpringBoot、Redis、Elasticsearch、Kafka等技术栈，可立即到岗。</p>
     </section>
 
     <!-- 教育背景 -->
     <section id="edu">
         <h2> 教育背景</h2>
         <div class="info-item">
-            <h3>东北大学（985 · 双一流）| 计算机科学与技术 本科</h3>
+            <h3>东北大学（985 · 双一流）</h3>
+            <h3>计算机科学与技术 本科</h3>
             <div class="meta">2023.09 - 至今 | GPA：3.535（专业前30%）</div>
             <p><strong>主修课程：</strong>软件工程(96)、电子技术基础(96)、数据结构(93)、算法设计与分析(92)、计算机网络(92)、C++程序设计(89)、计算机组成原理(87)、Java程序设计(85)、操作系统(85)</p>
         </div>
@@ -244,8 +248,11 @@
     <section id="comp">
         <h2> 科研竞赛</h2>
         <ul>
-            <li>第二十七届中国机器人及人工智能大赛机器人任务挑战赛全国总决赛二等奖两项（2025）</li>
             <li>“超分锐视表面缺陷检测系统”软件著作权（2025）</li>
+            <li>第二十七届中国机器人及人工智能大赛机器人任务挑战赛自主巡航全国总决赛二等奖（2025）</li>
+            <li>第二十七届中国机器人及人工智能大赛机器人任务挑战赛目标射击全国总决赛二等奖（2025）</li>
+            <li>第十七届蓝桥杯大赛软件赛省赛大学A组省级三等奖（2024）</li>
+            <li>第十四届APMCM亚太地区大学生数学建模竞赛省级三等奖（2024）</li>
             <li>校级奖学金（2024-2026）</li>
             <li>优秀团员（2024）</li>
             <li>优秀团干部标兵（2025）</li>
@@ -258,19 +265,23 @@
         <div class="info-item">
             <h3>NearbyLife 本地生活服务平台</h3>
             <div class="meta">2025.07 - 2025.10</div>
+            <div class="meta">面向线下商圈的本地生活服务平台，支持商户入驻、LBS推荐、内容种草与限时抢购，覆盖用户浏览、互动、交易全流程。</div>
             <ul>
-                <li>构建Caffeine + Redis多级缓存 + GEO附近推荐，热点商户响应降至微秒级</li>
-                <li>Redis+Lua秒杀+RabbitMQ削峰，TPS从800→1800+，超卖率归零</li>
-                <li>分布式锁优化降低冲突40%，布隆过滤器异常拦截率99%</li>
+                <li>基于Redis GEO实现附近店铺推荐，结合Caffeine本地缓存+Redis分布式缓存构建多级缓存架构，热门商户详情页响应时间降至微秒级；基于Redis+Lua脚本封装秒杀预扣减与一人一单校验，合并库存校验、限购、扣减为原子操作，结合RabbitMQ异步削峰完成订单落库，压测下抢购接口吞吐量达1800+TPS；</li>
+                <li>基于Redisson分布式锁解决集群重复下单问题，用Watchdog机制自动续期，结合锁粒度细化提升并发效率；</li>
+                <li>采用布隆过滤器预热有效商品ID拦截缓存穿透，配合RateLimiter实现用户维度限流防刷；</li>
+                <li>基于Elasticsearch构建全文检索，支持店铺名称、品类、位置多条件组合搜索与中文分词匹配。</li>
             </ul>
         </div>
         <div class="info-item" style="margin-top:28px;">
             <h3>KnowFlow 智能知识助手</h3>
             <div class="meta">2026.02 - 至今</div>
+            <div class="meta">企业级智能化知识服务平台，融合RAG检索增强生成与Agent自主决策能力，支持多源文档入库、混合检索、多轮推理，并赋予 Agent 调用外部工具执行复杂任务的能力。</div>
             <ul>
-                <li>BM25+KNN混合检索使RAG准确率从72%→89%</li>
-                <li>MinIO+Kafka异步解析，文件延迟从分钟级→秒级</li>
-                <li>WebSocket流式输出，交互等待时间降低60%</li>
+                <li>基于Elasticsearch构建BM25+KNN混合检索引擎，结合滑动窗口切片与重排序算法，显著提升RAG回答准确率；</li>
+                <li>基于MinIO+Kafka实现大文件分片上传与异步解析流水线，文件上传到可检索延迟控制在秒级；</li>
+                <li>基于SpringAI+MCP构建分层智能体（Base/ReAct/ToolCall），具备“思考-规划-行动-观察”闭环决策能力，可自主完成跨步骤复杂任务；</li>
+                <li>基于WebSocket+大模型流式API实现“打字机式”响应，优化长文本交互体验。</li>
             </ul>
         </div>
     </section>
@@ -308,15 +319,15 @@
             <span class="skill-tag">Cursor / Codex</span>
         </div>
         <div class="highlight-text">
-            ✅ 扎实计算机基础与并发编程能力<br>
-            ✅ 熟悉高并发、缓存、消息队列解决方案<br>
-            ✅ 掌握RAG、HyDE、Agent、MCP等AI工程能力<br>
-            ✅ 熟练使用AI辅助开发与SDD开发范式
+            1、 扎实计算机基础与并发编程能力<br>
+            2、 熟悉高并发、缓存、消息队列解决方案<br>
+            3、 掌握RAG、HyDE、Agent、MCP等AI工程能力<br>
+            4、 熟练使用AI辅助开发与SDD开发范式
         </div>
     </section>
 
     <footer>
-        <p>© 2026 李思源 | Java后端开发 | 可立即到岗</p>
+        <p>© 2027 林逸菲 | Java后端开发 | 可立即到岗</p>
     </footer>
 </div>
 
